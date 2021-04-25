@@ -34,3 +34,4 @@ burger.addEventListener('click', () => {
     }
 })
 
+new WOW().init();

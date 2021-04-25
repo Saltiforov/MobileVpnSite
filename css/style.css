@@ -99,7 +99,9 @@ button {
 .navbar-nav li {
     padding: 0 20px;
 }
-
+:root {
+    --animate-duration: 1s;
+}
 .banner {
     margin-top: 50px;
 }
