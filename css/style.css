@@ -17,6 +17,7 @@ i {
 a {
     text-decoration: none;
     color: #2D4497;
+    font-family: 'Lato';
 }
 
 li {
@@ -65,10 +66,18 @@ button {
     align-items: center;
     padding: 5px;
 }
-
+.navbar__inner.active{
+    max-width: 1200px;
+    padding: 0 15px;
+    margin: auto;
+}
 .navbar-brand img {
-    width: 80px;
-    height: 80px;
+    width: 100px;
+    height: 100px;
+}
+.navbar-brand.active img{
+    width: 65px;
+    height: 70px;
 }
 
 .navbar.active {
@@ -84,7 +93,7 @@ button {
     border: none;
     background: rgba(255, 255, 255, 0.8);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
-    padding: 0;
+    padding: 5px 0;
     transition: all 0.25s ease-in-out;
     border-bottom: 3px solid #8b71ba;
 
@@ -98,6 +107,36 @@ button {
 
 .navbar-nav li {
     padding: 0 20px;
+    font-weight: 400;
+    font-size: 20px;
+}
+.navbar-nav li a{
+    color: white;
+    position: relative;
+}
+.header__link:after{
+    content: '';
+    width: 32px;
+    background: none;
+    height: 4px;
+    position: absolute;
+    bottom: 2px;
+    z-index: 99999;
+    left: 0;
+    top: 30px;
+    transition: all 0.1s ease-in-out;
+}
+.navbar-nav li a:hover:after{
+    background-color: white;
+}
+.navbar-collapse{
+    padding-top: 55px;
+}
+.navbar-collapse.active{
+    padding-top: 0;
+}
+.navbar-collapse.active .navbar-nav li a {
+    color: #2D4497;
 }
 :root {
     --animate-duration: 1s;
@@ -109,15 +148,18 @@ button {
 .banner-img {
     width: 250px;
     height: 500px;
+    margin-right: 55px;
 }
 
 .banner__inner {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
 }
 
-.banner__title {
+.banner__title,
+.banner__title-sub
+{
     font-size: 70px;
     font-weight: bold;
     line-height: 50px;
@@ -146,7 +188,7 @@ button {
             180deg, #ffffff 0%, #e0e0e0 100%);
     padding: 10px 20px;
     border-radius: 25px;
-    color: #2D4497;
+    color: #2D4497!important;
 }
 
 .banner__btn-right {
@@ -340,6 +382,20 @@ button {
     width: 100%;
     margin: 0 50px 15px 50px;
     font-size: 22px;
+    position: relative;
+    min-height: 130px;
+
+}
+.review__inner-comment:after{
+    content: '';
+    background-color: white;
+    width: 50px;
+    height: 50px;
+    left: -10px;
+    top: 35%;
+    z-index: -1;
+    position: absolute;
+    transform: rotate(45deg);
 }
 
 .review__inner-comment h3 {
@@ -357,6 +413,9 @@ button {
 .img-responsive {
     border-radius: 50%;
     border: 3px solid white;
+    width: 134px;
+    height: 134px;
+    object-fit:cover;
 }
 
 .reviews,
@@ -373,10 +432,6 @@ button {
     color: #2D4497;
 }
 
-.about__info-title {
-    margin-top: 60px;
-}
-
 .swiper-pagination-bullet {
     background-color: white;
     width: 20px;
@@ -388,7 +443,7 @@ button {
 }
 
 .swiper-container-horizontal > .swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
-    bottom: 30%;
+    bottom: 15%;
 }
 
 .platforms {
@@ -402,6 +457,7 @@ button {
     margin: 0 auto;
     border-radius: 50px;
     box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
+    transition: all 0.25s ease-in-out;
 }
 
 .getApp-btn i {
@@ -411,14 +467,26 @@ button {
 .ios-link {
     display: flex;
     align-items: center;
-    padding: 10px 20px;
+    padding: 10px 40px;
     color: #2D4497;
 
+}
+
+.getApp-btn:hover{
+    background-color: #2D4497;
+    color: white;
+}
+.getApp-btn:hover .ios-link{
+    color: white;
+}
+.getApp-btn:hover i{
+    color: white;
 }
 
 .ios-link p {
     font-weight: bold;
     margin-left: 10px;
+    font-size: 18px;
 }
 
 .ios-link span {
@@ -443,13 +511,28 @@ button {
 }
 
 /*media start*/
+@media (max-width: 900px){
 
+}
 @media (max-width: 770px) {
     .features__block {
         flex-direction: column;
         margin-top: 30px;
     }
-
+    .navbar-nav li a:hover:after{
+        background-color: transparent;
+    }
+    .navbar-collapse.active .navbar-nav li a {
+        color: white;
+    }
+    .navbar__inner li:last-child{
+        color: white;
+        border-bottom: none;
+    }
+    .fill{
+        background: none;
+        color: white!important;
+    }
     .swiper-container-horizontal > .swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
         bottom: 5%;
     }
@@ -468,31 +551,47 @@ button {
     }
 }
 
-@media (max-width: 620px) {
+@media (max-width: 650px) {
     .banner__inner {
         flex-direction: column-reverse;
     }
-
-    .banner__title {
-        font-size: 50px;
-        text-align: center;
+    .banner{
+        margin-top: 0;
     }
 
+    .banner__title{
+        font-size: 50px;
+        text-align: center;
+        margin-top: 70px;
+    }
+    .banner__title-sub{
+        display: none;
+    }
     .banner__btn-left {
         font-size: 18px;
     }
-
-    .banner {
-        margin-top: 20px;
-    }
-
     .banner-img {
         width: 220px;
         height: 400px;
+        margin-right: 0;
     }
+    .navbar.active{
+        background-color: #2D4497;
+        border-bottom: none;
+        box-shadow: none;
+        padding: 0;
+    }
+    .swiper-container {
+        height: 360px;
+    }
+
 }
 
-@media (max-width: 600px) {
+@media (max-width: 640px) {
+    .navbar-brand.active img{
+        width: 50px;
+        height: 55px;
+    }
     .review__inner {
         flex-direction: column;
     }
@@ -505,12 +604,7 @@ button {
         padding-bottom: 60px;
     }
 
-    .swiper-container {
-        height: 330px;
-    }
-    .navbar.active{
-        padding: 10px;
-    }
+
 
     .swiper-container-horizontal > .swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
         bottom: 0;
@@ -518,7 +612,7 @@ button {
 
     .navbar-brand img {
         width: 50px;
-        height: 50px;
+        height: 55px;
     }
     .navbar-nav{
         position: fixed;
@@ -531,19 +625,27 @@ button {
         text-align: center;
         margin-bottom: 10px;
     }
+    .navbar__inner.active{
+        padding: 10px 10px;
+    }
     .navbar-active{
-        /*padding: 10px 50px;*/
-        padding: 0;
         position: absolute;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         left: 0;
-        top: 79%;
-        width: 100%;
+        top: 90%;
+        width: 90%;
+        margin: auto;
+        padding: 0;
         background-color: #2D4497;
         transition: all 0.3s ease 0s;
+        border-radius: 25px;
+    }
+    .collapse.active .navbar-active{
+        width: 100%;
+        border-radius: initial;
     }
     .navbar{
         position: fixed;
@@ -556,7 +658,7 @@ button {
     .header__burger {
         display: block;
         position: relative;
-        width: 30px;
+        width: 25px;
         height: 20px;
         z-index: 3;
         margin-left:auto;
@@ -567,32 +669,20 @@ button {
         padding:10px 10px;
     }
     .navbar__inner li{
-        padding:10px 0 10px;
+        padding:10px 0 12px;
         border-bottom: 1px solid white;
+        width: 80%;
     }
-    .navbar__inner li:last-child{
-        margin: 20px 0 20px;
-        border-bottom: none;
 
-    }
-    .getApp{
-        color: #2D4497!important;
-    }
-    .navbar.active{
-        border-bottom: none;
-        background: none;
-        box-shadow: none;
-        padding: 0;
-    }
+
+
     .header{
         padding: 0;
     }
     .header-container{
         padding: 0;
     }
-    .navbar__inner{
-        background-color: #2D4497;
-    }
+
     .navbar-active a{
         color: white;
     }
@@ -741,12 +831,15 @@ button {
     .media-heading {
         font-size: 18px;
     }
+    .banner__title{
+        margin-bottom: 10px;
+    }
+    .review__inner-comment:after{
+        display: none;
+    }
 }
 
 @media (max-width: 340px) {
-    .banner__title {
-        margin-bottom: 20px;
-    }
 
     .banner-img {
         width: 150px;
