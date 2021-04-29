@@ -1,0 +1,48 @@
+
+p{
+    margin: 15px 0;
+    font-size: 18px;
+}
+span{
+    font-weight: bold;
+}
+.title{
+    text-align: center;
+    margin: 50px 0;
+}
+.privacy__date span{
+    font-weight: bold;
+
+}
+.privacy__date{
+    margin-bottom: 15px;
+}
+.section__text-title{
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 20px;
+}
+.vaku-app-title{
+    font-size: 16px;
+    font-weight: lighter;
+    margin: 20px 0 0 0 ;
+}
+.section__list-link{
+    list-style: circle;
+    padding-bottom: 5px;
+}
+.section__list-inner{
+    padding-top: 10px;
+}
+.first{
+    list-style: disc;
+}
+.table tbody tr td:last-child{
+    width: 300px;
+}
+.table thead tr th:last-child{
+    width: 300px;
+}
+.text-underline{
+    text-decoration: underline;
+}

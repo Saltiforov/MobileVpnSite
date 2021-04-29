@@ -96,7 +96,6 @@ button {
     padding: 5px 0;
     transition: all 0.25s ease-in-out;
     border-bottom: 3px solid #8b71ba;
-
 }
 
 .navbar-nav {
@@ -144,11 +143,11 @@ button {
 .banner {
     margin-top: 50px;
 }
-
 .banner-img {
     width: 250px;
     height: 500px;
     margin-right: 55px;
+    image-rendering:crisp-edges !important;
 }
 
 .banner__inner {
@@ -230,7 +229,7 @@ button {
 
 .cards {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 }
 
@@ -240,6 +239,12 @@ button {
 
 .card-item {
     text-align: center;
+}
+.card-item:first-child{
+    margin-right: 150px;
+}
+.card-item:last-child{
+    margin-left: 150px;
 }
 
 .card-item-icon {
