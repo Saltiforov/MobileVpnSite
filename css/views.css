@@ -6,9 +6,23 @@ p{
 span{
     font-weight: bold;
 }
+i{
+    padding-right: 5px;
+    font-style: normal;
+}
+.list-point{
+    padding-left: 15px;
+}
 .title{
     text-align: center;
     margin: 50px 0;
+    font-weight: bold;
+}
+
+p a{
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-all;
 }
 .privacy__date span{
     font-weight: bold;
@@ -45,4 +59,65 @@ span{
 }
 .text-underline{
     text-decoration: underline;
+}
+.privacy__title,
+.terms__title{
+    margin-top: 100px;
+}
+.navbar-brand img{
+    height: 50px;
+}
+.collapse{
+    display: block;
+}
+.navbar{
+    padding: 0;
+}
+.header__link{
+    color: #2D4497!important;
+}
+.header__link:hover{
+    text-decoration: none;
+}
+.navbar__inner{
+    width: 100%;
+}
+.navbar-nav{
+    flex-direction: row;
+    justify-content: flex-end;
+    padding: 15px 0;
+}
+.navbar-collapse{
+    padding-top: 0;
+}
+.uppercase{
+    text-transform: uppercase;
+}
+.section__text-title.underline{
+    padding-bottom: 30px;
+    padding-top: 10px;
+    border-bottom: 1px solid black;
+}
+@media (max-width: 540px) {
+    .collapse{
+        position: absolute;
+        display: block;
+        width: 100%;
+    }
+    .navbar-nav{
+        width: 100%;
+        border-radius:initial;
+        justify-content: center;
+    }
+    .navbar-views{
+        position: relative;
+    }
+    .navbar-active{
+        width: 100%;
+        left: -20px;
+        top: 40px;
+    }
+    .header__link{
+        color: white!important;
+    }
 }
