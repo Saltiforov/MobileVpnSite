@@ -19,7 +19,8 @@ i{
     font-weight: bold;
 }
 
-p a{
+p a,
+li a{
     overflow-wrap: break-word;
     word-wrap: break-word;
     word-break: break-all;

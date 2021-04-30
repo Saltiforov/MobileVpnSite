@@ -925,8 +925,15 @@ button {
     .review__inner-comment:after {
         display: none;
     }
-}
+    .banner-img{
 
+    }
+}
+@media (max-width: 360px){
+    .banner-img{
+        height: 300px;
+    }
+}
 @media (max-width: 340px) {
 
     .banner-img {
