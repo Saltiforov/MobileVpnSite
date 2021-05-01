@@ -579,7 +579,7 @@ button {
     .banner__title {
         font-size: 60px;
         text-align: center;
-        margin-top: 80px;
+        margin-top: 100px;
     }
 
     .banner__title-sub {
@@ -592,7 +592,7 @@ button {
 
     .banner-img {
         width: auto;
-        height: 400px;
+        height: 475px;
         margin-right: 0;
         margin-top: 30px;
     }
@@ -781,6 +781,12 @@ button {
     .banner__inner-left{
         height: auto;
     }
+    .banner__btns{
+        margin-bottom: 20px;
+    }
+    .header{
+        overflow-y: hidden;
+    }
 }
 
 @media (max-width: 650px) {
@@ -801,7 +807,7 @@ button {
     .review__inner {
         flex-direction: column;
     }
-
+    banner__inner
     .review__inner-comment {
         width: 80%;
     }
@@ -897,7 +903,7 @@ button {
     }
     .banner-img{
         margin-top: 10px;
-        height: 350px;
+        height: 460px;
     }
 
 }
@@ -926,19 +932,18 @@ button {
         display: none;
     }
     .banner-img{
-
+        height: 420px;
     }
 }
-@media (max-width: 360px){
+@media (max-width: 361px){
     .banner-img{
-        height: 300px;
+        height: 380px;
     }
 }
-@media (max-width: 340px) {
+@media (max-width: 345px) {
 
     .banner-img {
-        width: 150px;
-        height: 280px;
+        height: 315px;
     }
 
     .banner__btn-left {
