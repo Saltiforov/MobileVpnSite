@@ -45,6 +45,7 @@ button {
     height: 100vh;
     background-color: #6B9AF8;
     z-index: -1;
+    overflow-y: hidden;
 }
 
 .container {
@@ -157,13 +158,15 @@ button {
 }
 
 .banner-img {
-    height: 80%;
     object-fit: contain;
     overflow: hidden;
     border-radius: 15px;
     margin-right: 80px;
 }
-
+.navbar.active + .banner{
+    margin-top: 155px;
+}
+.navbar-collapse.active .navbar-nav li a
 .banner__inner-left {
     height: 640px;
 }
@@ -571,7 +574,9 @@ button {
     .banner__inner {
         flex-direction: column-reverse;
     }
-
+    .navbar.active + .banner{
+        margin-top: 0;
+    }
     .banner {
         margin-top: 0;
     }
@@ -660,7 +665,12 @@ button {
     .navbar__inner.active {
         padding: 10px 10px;
     }
-
+    .navbar.active {
+        background-color: #2D4497;
+        border-bottom: none;
+        box-shadow: none;
+        padding: 0;
+    }
     .navbar-active {
         position: absolute;
         display: flex;
@@ -790,12 +800,7 @@ button {
 }
 
 @media (max-width: 650px) {
-    .navbar.active {
-        background-color: #2D4497;
-        border-bottom: none;
-        box-shadow: none;
-        padding: 0;
-    }
+
 
     .swiper-container {
         height: 360px;
@@ -907,10 +912,13 @@ button {
     }
 
 }
-
+@media (max-width: 412px) {
+    .banner-img{
+        height: 535px;
+    }
+}
 @media (max-width: 380px) {
     .review__inner-comment h3 {
-        /*font-size: 16px;*/
         padding-bottom: 10px;
     }
 
